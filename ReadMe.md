@@ -65,8 +65,8 @@ alldata <- rbind(train,test)
 ```
 
 ## Step 2: Extract only mean and standard deviation data
-```R
 My selection criteria for the mean and standard deviation data is discussed in the Codebook. The backslashes before the parenthesis escapes them so that grep can match them without problem.
+```R
 selectedFeatures <- grep("mean\\(\\)|std\\(\\)", featurelookup$FeatureName, ignore.case=TRUE, value=TRUE) #Feature name chr vector
 selectedMeasurements <- alldata[,c(c(1:2), grep("mean\\(\\)|std\\(\\)",featurelookup$FeatureName, ignore.case=TRUE) + 2)] 
 ```
