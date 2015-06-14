@@ -69,7 +69,7 @@ names(selected) <- c("SubjectID", "ActivityName", selectedFeatures)
 
 ###  Step 5 : Tidy outdata: Avg. per variable for each activity and subject  ###
 
-tidied <- aggregate(selected[, 3:length(selected)], 
+tidied <- aggregate(selected[, 3:ncol(selected)], 
                     list(SubjectID=selected$SubjectID, ActivityName=selected$ActivityName),
                     mean)
 
