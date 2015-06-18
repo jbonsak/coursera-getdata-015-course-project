@@ -56,7 +56,7 @@ activitylookup <- read.table(file.path(datafolder,"activity_labels.txt"), header
 ```
 
 ## Step 1: Merge the train and test data sets
-Train and test data are equally formatted (they were one data set originally, then randomly split 30/70), so after joining them separately to their subject and activity lookups, they can be stacked on top of each other again (append, here done by rbind).
+Training and test data are equally formatted (they were one data set originally, then randomly split 30/70), so after joining them separately to their subject and activity lookups, they can be stacked on top of each other again (append, here done by rbind).
 
 ```R
 train <- cbind(y_train,subject_train,x_train) 
@@ -93,3 +93,5 @@ tidied <- aggregate(selected[, 3:ncol(selected)],
                     mean)
 
 write.table(tidied, file = "tidy.txt", sep = "\t", row.names = FALSE) 
+```
+The dataset contains 180 observations plus header, and 68 variables. It can be read into R with read.table("tidy.txt", header=TRUE, sep="\t"), and I hope and believe it is tidy according to the "wide dataset" principles discussed by TA David Hood [here](https://class.coursera.org/getdata-015/forum/thread?thread_id=27), and by Hadley Wickham [here] (http://vita.had.co.nz/papers/tidy-data.pdf).

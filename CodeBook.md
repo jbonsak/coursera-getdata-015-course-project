@@ -93,7 +93,7 @@ tidy.txt, \t tab separated, 180 rows + 1 header row, 68 columns:
 
 1. SubjectID - Chr 1-30 identifying the person performing the activity
 2. ActivityName - Chr motion type (LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS)
-3. tBodyAcc-mean()-X
+3. tBodyAcc-mean()-X - See *Note regarding the rest of the variables below this list
 4. tBodyAcc-mean()-Y
 5. tBodyAcc-mean()-Z
 6. tBodyAcc-std()-X
@@ -160,4 +160,4 @@ tidy.txt, \t tab separated, 180 rows + 1 header row, 68 columns:
 67. fBodyBodyGyroJerkMag-mean()
 68. fBodyBodyGyroJerkMag-std()
 
-Note: t and f prefixed features 3:68 are from the time and frequency domain respectively, and their values are normalized numbers within the -1 to +1 range.
+*Note: t and f prefixed features 3:68 are from the time and frequency domain respectively, and their values are normalized numbers within the -1 to +1 range. They are all averages (means) of their measurements per subject and activity. 
